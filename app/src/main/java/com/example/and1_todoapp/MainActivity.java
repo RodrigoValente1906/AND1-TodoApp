@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,6 +16,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -69,18 +72,15 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
     }
 
-    private void setupNavigation()
-    {
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        setSupportActionBar(toolbar);
-
-        NavigationUI.setupWithNavController(bottomNavigationView, navController);
-        NavigationUI.setupWithNavController(navigationView, navController);
-    }
-
     public void signOut()
     {
-
+        AuthUI.getInstance().signOut(this).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task)
+                    {
+                        startLoginActivity();
+                    }
+                });
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -111,5 +111,14 @@ public class MainActivity extends AppCompatActivity {
 
                 })
                 .addOnFailureListener(e -> Log.w(TAG, "Cannot add member to the database"));
+    }
+
+    private void setupNavigation()
+    {
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        setSupportActionBar(toolbar);
+
+        NavigationUI.setupWithNavController(bottomNavigationView, navController);
+        NavigationUI.setupWithNavController(navigationView, navController);
     }
 }

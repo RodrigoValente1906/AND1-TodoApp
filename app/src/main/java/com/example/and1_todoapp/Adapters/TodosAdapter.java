@@ -25,7 +25,7 @@ public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.ViewHolder> 
 
     private ArrayList<Todo> todos;
     private DatabaseReference databaseReference= FirebaseDatabase.getInstance("https://and1-todoapp-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
-    private TodosAdapter.OnClickListener listener;
+    private OnClickListener listener;
     Context context;
 
     public TodosAdapter()
@@ -48,9 +48,8 @@ public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.ViewHolder> 
                 notifyDataSetChanged();
                 for (int i=0; i<todos.size(); i++)
                 {
-                    System.out.println("!!!!!!!!!!!!!!!!!"+todos.get(i).getTitle());
+                    System.out.println("!!!!!!!!!!!!!!!!"+todos.get(i).getTitle());
                 }
-
             }
 
             @Override
@@ -76,7 +75,7 @@ public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.ViewHolder> 
         holder.todoName.setText(todos.get(position).getTitle());
         holder.todoDeadline.setText(todos.get(position).getDeadline().toString());
         holder.todoDescription.setText(todos.get(position).getDescription());
-        holder.boardName.setText(todos.get(position).getBoard().getBoardName());
+        //holder.boardName.setText(todos.get(position).getBoard().getBoardName());
     }
 
     @Override
@@ -96,14 +95,14 @@ public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.ViewHolder> 
         private final TextView todoName;
         private final TextView todoDeadline;
         private final TextView todoDescription;
-        private final TextView boardName;
+        //private final TextView boardName;
 
         ViewHolder(View itemView){
             super(itemView);
             this.todoName = itemView.findViewById(R.id.todo_title);
             this.todoDeadline = itemView.findViewById(R.id.todo_deadline);
             this.todoDescription = itemView.findViewById(R.id.todo_description);
-            this.boardName = itemView.findViewById(R.id.boardName);
+            //this.boardName = itemView.findViewById(R.id.boardName);
             itemView.setOnClickListener(v -> listener.onClick(todos.get(getBindingAdapterPosition())));
         }
     }

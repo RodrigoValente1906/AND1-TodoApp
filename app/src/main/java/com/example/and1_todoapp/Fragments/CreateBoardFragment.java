@@ -62,7 +62,7 @@ public class CreateBoardFragment extends Fragment {
                         })
                         .addOnFailureListener(e -> Log.w(TAG, "Cannot add the board to the database"));
 
-                NavHostFragment.findNavController(CreateBoardFragment.this).navigate(R.id.menu_myBoards);
+                NavHostFragment.findNavController(CreateBoardFragment.this).navigate(R.id.my_boards_menu);
             }
         });
         return view;

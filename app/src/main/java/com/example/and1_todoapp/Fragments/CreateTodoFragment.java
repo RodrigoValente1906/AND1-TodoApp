@@ -77,7 +77,8 @@ public class CreateTodoFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
         context = container.getContext();
 
         View view = inflater.inflate(R.layout.create_todo_fragment, container, false);
@@ -104,7 +105,7 @@ public class CreateTodoFragment extends Fragment {
                 Log.d("Todo", "Successfully added to the database ");
             }).addOnFailureListener(e -> Log.w("Todo", "Cannot add the todo to the database"));
 
-            NavHostFragment.findNavController(this).navigate(R.id.menu_myTodos);
+            NavHostFragment.findNavController(this).navigate(R.id.my_todos_menu);
         });
 
         autoCompleteTextViewBoards = view.findViewById(R.id.select_board);

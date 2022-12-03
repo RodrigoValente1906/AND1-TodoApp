@@ -30,4 +30,5 @@
     <string name="board_name">Board Name</string>
     <string name="hello_empty_fragment">There is nothing here :)</string>
     <string name="welcome">Welcome!</string>
+    <string name="board_title">Board Title</string>
 </resources>

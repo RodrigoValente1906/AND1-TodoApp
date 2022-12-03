@@ -67,7 +67,4 @@ public class BoardsFragment extends Fragment {
 
         return view;
     }
-
-
-
 }

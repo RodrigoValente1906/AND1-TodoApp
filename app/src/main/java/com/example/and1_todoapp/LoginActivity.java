@@ -24,21 +24,15 @@ public class LoginActivity extends AppCompatActivity {
                 if (result.getResultCode() == RESULT_OK)
                     goToMainActivity();
                 else
-                    Toast.makeText(this, "SIGN IN INVALID", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "SIGN IN CANCELLED", Toast.LENGTH_SHORT).show();
             }
     );
-
-    private void goToMainActivity() {
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin_activity);
         checkIfSignedIn();
-
     }
 
     private void checkIfSignedIn() {
@@ -46,7 +40,11 @@ public class LoginActivity extends AppCompatActivity {
         if (user != null) {
             goToMainActivity();
         }
+    }
 
+    private void goToMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
     public void signIn(View v) {

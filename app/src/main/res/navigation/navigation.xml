@@ -6,32 +6,32 @@
     app:startDestination="@+id/fragment_welcome">
 
     <fragment
-        android:id="@+id/fragment_create_todo"
+        android:id="@+id/create_todo_fragment"
         android:name="com.example.and1_todoapp.Fragments.CreateTodoFragment"
         android:label="@string/create_todo"/>
 
     <fragment
-        android:id="@+id/fragment_create_board"
+        android:id="@+id/create_board_fragment"
         android:name="com.example.and1_todoapp.Fragments.CreateBoardFragment"
         android:label="@string/create_board"/>
 
     <fragment
-        android:id="@+id/fragment_blank"
+        android:id="@+id/empty_fragment"
         android:name="com.example.and1_todoapp.Fragments.EmptyFragment"
         android:label="@string/hello_empty_fragment"/>
 
     <fragment
-        android:id="@+id/menu_myBoards"
+        android:id="@+id/my_boards_menu"
         android:name="com.example.and1_todoapp.Fragments.BoardsFragment"
         android:label="@string/my_boards"/>
 
     <fragment
-        android:id="@+id/menu_myTodos"
+        android:id="@+id/my_todos_menu"
         android:name="com.example.and1_todoapp.Fragments.TodosFragment"
         android:label="@string/my_todos"/>
 
     <fragment
-        android:id="@+id/menu_friends"
+        android:id="@+id/my_friends_menu"
         android:name="com.example.and1_todoapp.Fragments.MembersFragment"
         android:label="My Friends"/>
 

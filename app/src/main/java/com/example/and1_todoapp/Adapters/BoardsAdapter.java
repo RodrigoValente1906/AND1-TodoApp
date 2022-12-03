@@ -66,7 +66,7 @@ public class BoardsAdapter extends RecyclerView.Adapter<BoardsAdapter.ViewHolder
             @Override
             public void onCancelled(@NonNull DatabaseError error)
             {
-                Toast.makeText(context, "Fail to get data.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Failed to get data.", Toast.LENGTH_SHORT).show();
             }
         });
     }

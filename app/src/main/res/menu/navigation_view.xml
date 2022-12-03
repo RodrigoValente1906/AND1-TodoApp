@@ -10,17 +10,9 @@
             android:icon="@drawable/menu_img"
             android:title="@string/my_todos" />
         <item
-            android:id="@+id/create_todo_fragment"
-            android:icon="@android:drawable/ic_input_add"
-            android:title="@string/create_todo" />
-        <item
             android:id="@+id/my_boards_menu"
             android:icon="?attr/actionModePasteDrawable"
             android:title="@string/my_boards" />
-        <item
-            android:id="@+id/create_board_fragment"
-            android:icon="@android:drawable/ic_input_add"
-            android:title="@string/create_board" />
         <item
             android:id="@+id/my_friends_menu"
             android:icon="@android:drawable/ic_menu_myplaces"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_myTodos"
+        android:id="@+id/my_todos_menu"
         android:icon="@drawable/fui_ic_check_circle_black_128dp"
         android:title="@string/my_todos" />
 </menu>
