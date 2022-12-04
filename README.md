@@ -11,7 +11,7 @@ With this app you can manage your To-Dos and also create shared boards for proje
  - [ ] As a user, I want to delete a to-do so that I can delete a task from the system.
  - [x] As a user, I want to see the list of to-dos so that I can keep track all of my tasks.
  - [x] As a user, I want to set a deadline for a to-do so that I know until when I need to finish it.
- - [ ] As a user, I want to set a reminder for a to-do so that I do not forget it.
+ - [x] As a user, I want to set a reminder for a to-do so that I do not forget it.
  - [x] As a user, I want to create a shared board so that I can work in a project with other users.
  - [ ] As a user, I want to delete a shared board so that I can organize all of my shared boards.
  - [x] As a user, I want to see the list of shared boards so that I can keep track all of my shared boards.
