@@ -26,7 +26,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
     NavController navController;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -83,21 +84,25 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         getMenuInflater().inflate(R.menu.bar_menu, menu);
         return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId()) {
             case R.id.logout:
                 signOut();
                 return true;
             default:
                 return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);
-        }}
+        }
+    }
 
-    public void writeNewMemberToDatabase() {
+    public void writeNewMemberToDatabase()
+    {
 
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         String name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();

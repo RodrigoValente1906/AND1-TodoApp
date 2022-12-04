@@ -2,7 +2,8 @@ package com.example.and1_todoapp.Models;
 
 import java.util.ArrayList;
 
-public class Board {
+public class Board
+{
     public String boardName;
     public String boardDescription;
     public Member owner;

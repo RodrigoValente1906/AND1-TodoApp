@@ -15,7 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.and1_todoapp.R;
 import com.example.and1_todoapp.Adapters.TodosAdapter;
 
-public class TodosFragment extends Fragment {
+public class TodosFragment extends Fragment
+{
     RecyclerView todosList;
     TodosAdapter todosAdapter;
     Context context;

@@ -1,6 +1,7 @@
 package com.example.and1_todoapp.Models;
 
-public class Todo {
+public class Todo
+{
     public String title;
     public String deadline;
     public String description;

@@ -21,8 +21,8 @@ import com.example.and1_todoapp.R;
 
 import java.util.ArrayList;
 
-public class BoardsAdapter extends RecyclerView.Adapter<BoardsAdapter.ViewHolder> {
-
+public class BoardsAdapter extends RecyclerView.Adapter<BoardsAdapter.ViewHolder>
+{
     ArrayList<Board> boards;
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance("https://and1-todoapp-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
     private BoardsAdapter.OnClickListener listener;
@@ -60,7 +60,6 @@ public class BoardsAdapter extends RecyclerView.Adapter<BoardsAdapter.ViewHolder
                 {
                     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+boards.get(i).boardName);
                 }
-
             }
 
             @Override
@@ -97,7 +96,8 @@ public class BoardsAdapter extends RecyclerView.Adapter<BoardsAdapter.ViewHolder
         TextView boardOwner;
         TextView boardDescription;
 
-        ViewHolder(View itemView){
+        ViewHolder(View itemView)
+        {
             super(itemView);
             this.boardName = itemView.findViewById(R.id.board_name);
             this.boardOwner = itemView.findViewById(R.id.board_owner);

@@ -35,7 +35,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class CreateTodoFragment extends Fragment {
+public class CreateTodoFragment extends Fragment
+{
 
     private Button displayDate;
     private DatePickerDialog.OnDateSetListener dateSetListener;
@@ -109,9 +110,7 @@ public class CreateTodoFragment extends Fragment {
         });
 
         autoCompleteTextViewBoards = view.findViewById(R.id.select_board);
-
         autoCompleteTextViewMembers = view.findViewById(R.id.select_member);
-
         autoCompleteTextViewReminder = view.findViewById(R.id.select_Reminder);
         adapterItemsReminders = new ArrayAdapter<String>(context, R.layout.item_list, reminders);
         autoCompleteTextViewReminder.setAdapter(adapterItemsReminders);
@@ -123,7 +122,8 @@ public class CreateTodoFragment extends Fragment {
             }
         });
 
-        displayDate.setOnClickListener(new View.OnClickListener() {
+        displayDate.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 Calendar cal = Calendar.getInstance();
@@ -140,7 +140,8 @@ public class CreateTodoFragment extends Fragment {
             }
         });
 
-        dateSetListener = new DatePickerDialog.OnDateSetListener() {
+        dateSetListener = new DatePickerDialog.OnDateSetListener()
+        {
             @Override
             public void onDateSet(DatePicker datePicker, int day, int month, int year) {
                 month = month + 1;
@@ -152,7 +153,8 @@ public class CreateTodoFragment extends Fragment {
         return view;
     }
 
-    private void getDataMembers() {
+    private void getDataMembers()
+    {
 
         databaseReference.child("member").addValueEventListener(new ValueEventListener() {
 

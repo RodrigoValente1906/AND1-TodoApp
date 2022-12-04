@@ -13,7 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.and1_todoapp.R;
 import com.example.and1_todoapp.Adapters.MembersAdapter;
 
-public class MembersFragment extends Fragment {
+public class MembersFragment extends Fragment
+{
     RecyclerView membersList;
     MembersAdapter membersAdapter;
     Context context;
@@ -24,12 +25,14 @@ public class MembersFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
         context = container.getContext();
         View view = inflater.inflate(R.layout.members_fragment, container, false);
         membersList = view.findViewById(R.id.recyclerViewMember);

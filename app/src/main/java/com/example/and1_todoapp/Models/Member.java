@@ -1,6 +1,7 @@
 package com.example.and1_todoapp.Models;
 
-public class Member {
+public class Member
+{
     public String nickname;
     public String memberId;
 

@@ -21,8 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.ViewHolder> {
-
+public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.ViewHolder>
+{
     private ArrayList<Todo> todos;
     private DatabaseReference databaseReference= FirebaseDatabase.getInstance("https://and1-todoapp-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
     private OnClickListener listener;
@@ -97,7 +97,8 @@ public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.ViewHolder> 
         private final TextView todoDescription;
         //private final TextView boardName;
 
-        ViewHolder(View itemView){
+        ViewHolder(View itemView)
+        {
             super(itemView);
             this.todoName = itemView.findViewById(R.id.todo_title);
             this.todoDeadline = itemView.findViewById(R.id.todo_deadline);

@@ -16,7 +16,8 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.Arrays;
 import java.util.List;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity
+{
     private static final String TAG = "LoginActivity";
 
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
@@ -29,25 +30,29 @@ public class LoginActivity extends AppCompatActivity {
     );
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin_activity);
         checkIfSignedIn();
     }
 
-    private void checkIfSignedIn() {
+    private void checkIfSignedIn()
+    {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             goToMainActivity();
         }
     }
 
-    private void goToMainActivity() {
+    private void goToMainActivity()
+    {
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 
-    public void signIn(View v) {
+    public void signIn(View v)
+    {
         List<AuthUI.IdpConfig> providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.GoogleBuilder().build());

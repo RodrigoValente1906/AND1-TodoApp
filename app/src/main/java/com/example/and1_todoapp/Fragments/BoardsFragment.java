@@ -16,8 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.and1_todoapp.R;
 import com.example.and1_todoapp.Adapters.BoardsAdapter;
 
-public class BoardsFragment extends Fragment {
-
+public class BoardsFragment extends Fragment
+{
     RecyclerView boardsList;
     BoardsAdapter boardsAdapter;
     Context context;

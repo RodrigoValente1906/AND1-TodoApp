@@ -1,6 +1,7 @@
 package com.example.and1_todoapp.Models;
 
-public class Reminder {
+public class Reminder
+{
     public String type;
 
     public Reminder()
@@ -17,5 +18,4 @@ public class Reminder {
     {
         return type;
     }
-
 }

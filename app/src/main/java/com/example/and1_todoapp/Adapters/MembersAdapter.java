@@ -19,8 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
-public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.ViewHolder>{
-
+public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.ViewHolder>
+{
     private String[] members;
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance("https://and1-todoapp-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
     private OnClickListener listener;
@@ -62,7 +62,8 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.ViewHold
     {
         private final TextView nickname;
 
-        ViewHolder(View itemView) {
+        ViewHolder(View itemView)
+        {
             super(itemView);
             this.nickname = itemView.findViewById(R.id.nickname);
             itemView.setOnClickListener(v -> listener.onClick(members[getBindingAdapterPosition()]));

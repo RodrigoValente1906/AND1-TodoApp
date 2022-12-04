@@ -19,7 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class CreateBoardFragment extends Fragment {
+public class CreateBoardFragment extends Fragment
+{
 
     private TextView boardTitle;
     private TextView boardDescription;
@@ -34,8 +35,8 @@ public class CreateBoardFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
         context = container.getContext();
         View view = inflater.inflate(R.layout.create_board_fragment, container, false);
 
@@ -45,7 +46,8 @@ public class CreateBoardFragment extends Fragment {
 
         createBoardButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 String title = boardTitle.getText().toString();
                 String description = boardDescription.getText().toString();
                 String usedId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -58,7 +60,6 @@ public class CreateBoardFragment extends Fragment {
                         .setValue(board)
                         .addOnSuccessListener(aVoid -> {
                             Log.d(TAG, "Successfully added to the database ");
-
                         })
                         .addOnFailureListener(e -> Log.w(TAG, "Cannot add the board to the database"));
 
