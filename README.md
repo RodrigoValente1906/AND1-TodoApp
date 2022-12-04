@@ -17,3 +17,7 @@ With this app you can manage your To-Dos and also create shared boards for proje
  - [x] As a user, I want to see the list of shared boards so that I can keep track all of my shared boards.
  - [x] As a user, I want to assign a user to a to-do so that I can organize the shared board.
  - [x] As a user, I want to see the list of users in a shared board so that I can keep track all users.
+
+# Youtube Video
+
+https://www.youtube.com/watch?v=OMW00cUG6Jo
