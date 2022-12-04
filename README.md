@@ -4,7 +4,7 @@ This app aims for people who wants to be organized during the day.
 With this app you can manage your To-Dos and also create shared boards for projects, where you can assign members.
 
 # Requirements
- - As a user, I want to sign up to the app so that I have an account. - [x]
+ - [x] As a user, I want to sign up to the app so that I have an account.
  - As a user, I want to sign in to the app so that I can access my account. - DONE
  - As a user, I want to delete my account so that I remove my data. - NOT DONE
  - As a user, I want to create a to-do so that I can create a task in the system. - DONE
